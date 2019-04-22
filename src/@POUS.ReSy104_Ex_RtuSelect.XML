@@ -1,6 +1,6 @@
 <project xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.kw-software.com/xml/PLCopen/TC6_XML_V10_KW.xsd">
 	<fileHeader companyName="Phoenix Contact" companyURL="https://www.phoenixcontact-software.com" productName="PC WORX" productVersion="6.30" productRelease="Build 500" creationDateTime="2019-04-15T16:09:41" contentDescription="###XMLINFO=2;1;"/>
-	<contentHeader name="resy104-confirmation" version="1555342082" modificationDateTime="2019-04-15T18:28:02" connectionCheck="true">
+	<contentHeader name="resy104-confirmation" version="1555931884" modificationDateTime="2019-04-22T14:18:04" connectionCheck="true">
 		<coordinateInfo>
 			<pageSize x="999" y="9999"/>
 			<fbd>
@@ -17,7 +17,7 @@
 	<types>
 		<dataTypes/>
 		<pous>
-			<pou name="ReSy104_Ex_RtuSelect" pouType="program" lastChange="2019-04-15T18:28:02">
+			<pou name="ReSy104_Ex_RtuSelect" pouType="program" lastChange="2019-04-22T14:18:04">
 				<interface>
 					<externalVars retain="false">
 						<variable name="GSR_Clock" group="Default">
@@ -111,21 +111,12 @@
 						</variable>
 					</externalVars>
 					<localVars retain="false">
-						<variable name="xVar" group="Default">
+						<variable name="ReadyToExecuteCommand58" group="Default">
 							<type>
-								<BOOL/>
+								<derived name="ReadyToExecuteCommand"/>
 							</type>
 						</variable>
-					</localVars>
-					<externalVars retain="false">
-						<variable name="Val" group="Default">
-							<type>
-								<BOOL/>
-							</type>
-						</variable>
-					</externalVars>
-					<localVars retain="false">
-						<variable name="xVal" group="Default">
+						<variable name="xReady58" group="Default">
 							<type>
 								<BOOL/>
 							</type>
@@ -885,6 +876,75 @@
 								</connectionPointOut>
 								<expression>usint#58</expression>
 							</inVariable>
+							<inVariable localId="19" width="20" height="2">
+								<position x="27" y="83"/>
+								<connectionPointOut>
+									<relPosition x="20" y="1"/>
+								</connectionPointOut>
+								<expression>LSR_ConnectionPoint</expression>
+							</inVariable>
+							<outVariable localId="20" width="20" height="2">
+								<position x="102" y="83"/>
+								<connectionPointIn>
+									<relPosition x="0" y="1"/>
+									<connection refLocalId="28" formalParameter="INOUT_LSR_ConnectionPoint"/>
+								</connectionPointIn>
+								<expression>LSR_ConnectionPoint</expression>
+							</outVariable>
+							<inVariable localId="21" width="11" height="2">
+								<position x="36" y="75"/>
+								<connectionPointOut>
+									<relPosition x="11" y="1"/>
+								</connectionPointOut>
+								<expression>xReady58</expression>
+							</inVariable>
+							<inVariable localId="22" width="16" height="2">
+								<position x="31" y="79"/>
+								<connectionPointOut>
+									<relPosition x="16" y="1"/>
+								</connectionPointOut>
+								<expression>CxSC_LX_Value</expression>
+							</inVariable>
+							<outVariable localId="23" width="16" height="2">
+								<position x="102" y="79"/>
+								<connectionPointIn>
+									<relPosition x="0" y="1"/>
+									<connection refLocalId="28" formalParameter="INOUT_LX_ScsValue"/>
+								</connectionPointIn>
+								<expression>CxSC_LX_Value</expression>
+							</outVariable>
+							<block width="51" height="16" typeName="ReadyToExecuteCommand" instanceName="ReadyToExecuteCommand58" localId="28">
+								<position x="49" y="72"/>
+								<inputVariables>
+									<variable formalParameter="xReady" dataType="BOOL" invertable="true" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="4"/>
+											<connection refLocalId="21"/>
+										</connectionPointIn>
+									</variable>
+								</inputVariables>
+								<inOutVariables>
+									<variable formalParameter="INOUT_LX_ScsValue" dataType="BOOL">
+										<connectionPointIn>
+											<relPosition x="-2" y="8"/>
+											<connection refLocalId="22"/>
+										</connectionPointIn>
+										<connectionPointOut>
+											<relPosition x="55" y="8"/>
+										</connectionPointOut>
+									</variable>
+									<variable formalParameter="INOUT_LSR_ConnectionPoint" dataType="ReSy104_SR_ConnectionPoint">
+										<connectionPointIn>
+											<relPosition x="-2" y="12"/>
+											<connection refLocalId="19"/>
+										</connectionPointIn>
+										<connectionPointOut>
+											<relPosition x="55" y="12"/>
+										</connectionPointOut>
+									</variable>
+								</inOutVariables>
+								<outputVariables/>
+							</block>
 						</worksheet>
 						<worksheet name="CxSE_SetPointFloating" SizeX="400" SizeY="400">
 							<block width="61" height="40" typeName="ReSy104_CxSExFloatV01" instanceName="ReSy104_CxSExFloatV01_1" localId="10">
@@ -1012,24 +1072,6 @@
 									<relPosition x="10" y="1"/>
 								</connectionPointOut>
 								<expression>usint#63</expression>
-							</inVariable>
-							<outVariable localId="19" width="48" height="2">
-								<position x="61" y="64"/>
-								<connectionPointIn>
-									<relPosition x="0" y="1"/>
-									<connection refLocalId="20">
-										<position x="61" y="65" pathnode="false"/>
-										<position x="54" y="65" pathnode="false"/>
-									</connection>
-								</connectionPointIn>
-								<expression>CxSExFl_LSR_ParameterState.X_SeExUseSelectExecute</expression>
-							</outVariable>
-							<inVariable localId="20" width="6" height="2">
-								<position x="48" y="64"/>
-								<connectionPointOut>
-									<relPosition x="6" y="1"/>
-								</connectionPointOut>
-								<expression>true</expression>
 							</inVariable>
 						</worksheet>
 					</FBD>

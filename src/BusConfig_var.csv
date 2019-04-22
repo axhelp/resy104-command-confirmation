@@ -102,3 +102,4 @@ Default value is FALSE.
 %MD1.3072;UDINT;STD_CNF STD_RES DC_AMOUNT;Amount of successfull Download Changes on the current project.
 ;ReSyBasic_SR_Clock;STD_CNF STD_RES GSR_Clock;
 ;ReSyBasic_SR_GlobalConnecPoint;STD_CNF STD_RES GSR_GlobalConnectPoint;
+;BOOL;STD_CNF STD_RES Val;
