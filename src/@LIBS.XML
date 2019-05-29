@@ -1,6 +1,6 @@
 <project xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.kw-software.com/xml/PLCopen/TC6_XML_V10_KW.xsd">
 	<fileHeader companyName="Phoenix Contact" companyURL="https://www.phoenixcontact-software.com" productName="PC WORX" productVersion="6.30" productRelease="Build 500" creationDateTime="2019-04-15T16:09:41" contentDescription="###XMLINFO=2;1;"/>
-	<contentHeader name="resy104-confirmation" version="1555333781" modificationDateTime="2019-04-15T16:09:41" connectionCheck="true">
+	<contentHeader name="resy104-confirmation" version="1559138514" modificationDateTime="2019-05-29T17:01:54" connectionCheck="true">
 		<coordinateInfo>
 			<pageSize x="999" y="9999"/>
 			<fbd>
@@ -15,9 +15,8 @@
 		</coordinateInfo>
 	</contentHeader>
 	<libraries>
-		<library name="ReSyBasic_V630B60" firmware="false" path="D:\dev\resy104-command-confirmation\bin\libraries\ReSyBasic_V630B60.mwt"/>
-		<library name="ReSy104_V601B12" firmware="false" path="D:\dev\resy104-command-confirmation\bin\libraries\ReSy104_V601B12.mwt"/>
-		<library name="LegacyProConOS" firmware="true" path="C:\ProgramData\Phoenix Contact\PC WORX\6_30_500\plc\FW_LIB\LegacyProConOS\LegacyProConOS.fwl"/>
+		<library name="ReSyBasic_V630B69" firmware="false" path="D:\dev\resy104-command-confirmation\bin\libraries\ReSyBasic_V630B69.mwt"/>
+		<library name="ReSy10x_V2007" firmware="false" path="D:\dev\resy104-command-confirmation\bin\libraries\ReSy10x_V2007.mwt"/>
 	</libraries>
 	<types>
 		<dataTypes/>

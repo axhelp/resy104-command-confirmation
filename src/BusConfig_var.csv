@@ -101,5 +101,7 @@ Default value is FALSE.
 %MB1.400;STRING;STD_CNF STD_RES PLC_RES_NAME;Resource Name in PC WORX
 %MD1.3072;UDINT;STD_CNF STD_RES DC_AMOUNT;Amount of successfull Download Changes on the current project.
 ;ReSyBasic_SR_Clock;STD_CNF STD_RES GSR_Clock;
-;ReSyBasic_SR_GlobalConnecPoint;STD_CNF STD_RES GSR_GlobalConnectPoint;
-;BOOL;STD_CNF STD_RES Val;
+;ReSyBasic_SR_GlobalConnecPoint;STD_CNF STD_RES GSR_GlobalConnectionPoint;
+;ReSyBasic_SR_NavServerState;STD_CNF STD_RES LSR_SmartState;
+;ReSyBasic_SR_NavServParameter;STD_CNF STD_RES LSR_SmartParameter;
+;ReSy10x_SR_ConnectionPoint;STD_CNF STD_RES GSR_ConnectionPoint;

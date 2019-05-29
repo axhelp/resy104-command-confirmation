@@ -1,6 +1,6 @@
 <project xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.kw-software.com/xml/PLCopen/TC6_XML_V10_KW.xsd">
 	<fileHeader companyName="Phoenix Contact" companyURL="https://www.phoenixcontact-software.com" productName="PC WORX" productVersion="6.30" productRelease="Build 500" creationDateTime="2019-04-15T16:09:41" contentDescription="###XMLINFO=2;1;"/>
-	<contentHeader name="resy104-confirmation" version="1555931884" modificationDateTime="2019-04-22T14:18:04" connectionCheck="true">
+	<contentHeader name="resy104-confirmation" version="1559140194" modificationDateTime="2019-05-29T17:29:54" connectionCheck="true">
 		<coordinateInfo>
 			<pageSize x="999" y="9999"/>
 			<fbd>
@@ -17,150 +17,113 @@
 	<types>
 		<dataTypes/>
 		<pous>
-			<pou name="ReSy104_Ex_RtuSelect" pouType="program" lastChange="2019-04-22T14:18:04">
+			<pou name="ReSy104_Ex_RtuSelect" pouType="program" lastChange="2019-05-29T17:29:54">
 				<interface>
-					<externalVars retain="false">
-						<variable name="GSR_Clock" group="Default">
-							<type>
-								<derived name="ReSyBasic_SR_Clock"/>
-							</type>
-						</variable>
-					</externalVars>
 					<localVars retain="false">
-						<variable name="ReSy104_ConnectMgTcpV06_1" group="Default">
+						<variable name="ReSy10x_ConnectMgTcpV04_1" group="FB">
 							<type>
-								<derived name="ReSy104_ConnectMgTcpV06"/>
+								<derived name="ReSy10x_ConnectMgTcpV04"/>
 							</type>
 						</variable>
-						<variable name="LSR_StateConnectManager" group="Default">
+						<variable name="ReSy10x_104LinkManagV03_1" group="FB">
 							<type>
-								<derived name="ReSyBasic_SR_StateConnectIp"/>
+								<derived name="ReSy10x_104LinkManagV03"/>
 							</type>
 						</variable>
-						<variable name="LSR_ConnectionPoint" group="Default">
+						<variable name="ReSy10x_104ObjManagerV01_1" group="FB">
 							<type>
-								<derived name="ReSy104_SR_ConnectionPoint"/>
+								<derived name="ReSy10x_104ObjManagerV01"/>
 							</type>
 						</variable>
-						<variable name="ReSy104_LinkManagerV03_1" group="Default">
+						<variable name="ReSy10x_CxSCxSingleCoV10_1" group="FB">
 							<type>
-								<derived name="ReSy104_LinkManagerV03"/>
+								<derived name="ReSy10x_CxSCxSingleCoV10"/>
 							</type>
 						</variable>
-						<variable name="LSR_StateLinkManager" group="Default">
-							<type>
-								<derived name="ReSy104_SR_StateLinkManager"/>
-							</type>
-						</variable>
-						<variable name="ReSy104_ObjectManagerV06_1" group="Default">
-							<type>
-								<derived name="ReSy104_ObjectManagerV06"/>
-							</type>
-						</variable>
-						<variable name="LSR_StateObjektManager" group="Default">
-							<type>
-								<derived name="ReSy104_SR_StateObjectMg"/>
-							</type>
-						</variable>
-						<variable name="ReSy104_CxSCxSingleCoV01_1" group="Default">
-							<type>
-								<derived name="ReSy104_CxSCxSingleCoV01"/>
-							</type>
-						</variable>
-						<variable name="ReSy104_CxSExFloatV01_1" group="Default">
-							<type>
-								<derived name="ReSy104_CxSExFloatV01"/>
-							</type>
-						</variable>
-						<variable name="CxSExFl_LSR_ParameterState" group="Default">
-							<type>
-								<derived name="ReSy104_SR_ObjParamStateQOS"/>
-							</type>
-						</variable>
-						<variable name="CxSC_LSR_ParameterState" group="Default">
-							<type>
-								<derived name="ReSy104_SR_ObjParamStateSCO"/>
-							</type>
-						</variable>
-						<variable name="CxSExFl_LR_Value" group="Default">
-							<type>
-								<REAL/>
-							</type>
-						</variable>
-						<variable name="CxSC_LX_Value" group="Default">
+						<variable name="xReady58" group="Internal">
 							<type>
 								<BOOL/>
 							</type>
 						</variable>
-						<variable name="LSR_NavState" group="Default">
+						<variable name="CxSC_LX_Value" group="Internal">
+							<type>
+								<BOOL/>
+							</type>
+						</variable>
+						<variable name="LSR_SmartState" group="Internal">
 							<type>
 								<derived name="ReSyBasic_SR_NavServerState"/>
 							</type>
 						</variable>
-						<variable name="LSR_NavParameter" group="Default">
+						<variable name="LSR_SmartParameter" group="Internal">
 							<type>
 								<derived name="ReSyBasic_SR_NavServParameter"/>
 							</type>
 						</variable>
+						<variable name="LSR_StateLinkManager" group="Internal">
+							<type>
+								<derived name="ReSy10x_SR_104LinkMgState"/>
+							</type>
+						</variable>
+						<variable name="LSR_StateObjektManager" group="Internal">
+							<type>
+								<derived name="ReSy10x_SR_ObjMgState"/>
+							</type>
+						</variable>
+						<variable name="CxSC_LSR_ParameterState" group="Internal">
+							<type>
+								<derived name="ReSy10x_SR_ObjParamStateSCO"/>
+							</type>
+						</variable>
+						<variable name="LSR_StateConnectManager" group="Internal">
+							<type>
+								<derived name="ReSy10x_SR_ConMgState"/>
+							</type>
+						</variable>
+						<variable name="LSR_ObjConnectionPoint" group="Internal">
+							<type>
+								<derived name="ReSy10x_SR_ObjectConnectPoint"/>
+							</type>
+						</variable>
 					</localVars>
 					<externalVars retain="false">
-						<variable name="GSR_GlobalConnectPoint" group="Default">
+						<variable name="GSR_Clock" group="Global">
+							<type>
+								<derived name="ReSyBasic_SR_Clock"/>
+							</type>
+						</variable>
+						<variable name="GSR_ConnectionPoint" group="Global">
+							<type>
+								<derived name="ReSy10x_SR_ConnectionPoint"/>
+							</type>
+						</variable>
+						<variable name="GSR_GlobalConnectionPoint" group="Global">
 							<type>
 								<derived name="ReSyBasic_SR_GlobalConnecPoint"/>
 							</type>
 						</variable>
 					</externalVars>
-					<localVars retain="false">
-						<variable name="ReadyToExecuteCommand58" group="Default">
-							<type>
-								<derived name="ReadyToExecuteCommand"/>
-							</type>
-						</variable>
-						<variable name="xReady58" group="Default">
-							<type>
-								<BOOL/>
-							</type>
-						</variable>
-					</localVars>
 				</interface>
 				<body>
 					<FBD>
 						<worksheet name="Connect" SizeX="400" SizeY="400">
-							<inVariable localId="0" width="25" height="2">
-								<position x="7" y="57"/>
-								<connectionPointOut>
-									<relPosition x="25" y="1"/>
-								</connectionPointOut>
-								<expression>LSR_StateConnectManager</expression>
-							</inVariable>
-							<outVariable localId="1" width="25" height="2">
-								<position x="97" y="57"/>
+							<outVariable localId="0" width="25" height="2">
+								<position x="96" y="69"/>
 								<connectionPointIn>
 									<relPosition x="0" y="1"/>
-									<connection refLocalId="17" formalParameter="INOUT_LSR_State">
-										<position x="97" y="58" pathnode="false"/>
-										<position x="96" y="58" pathnode="false"/>
-									</connection>
+									<connection refLocalId="20" formalParameter="INOUT_LSR_State"/>
 								</connectionPointIn>
 								<expression>LSR_StateConnectManager</expression>
 							</outVariable>
-							<inVariable localId="2" width="20" height="2">
-								<position x="13" y="61"/>
+							<inVariable localId="1" width="6" height="2">
+								<position x="32" y="17"/>
 								<connectionPointOut>
-									<relPosition x="20" y="1"/>
+									<relPosition x="6" y="1"/>
 								</connectionPointOut>
-								<expression>LSR_ConnectionPoint</expression>
+								<expression>true</expression>
 							</inVariable>
-							<outVariable localId="3" width="20" height="2">
-								<position x="96" y="61"/>
-								<connectionPointIn>
-									<relPosition x="0" y="1"/>
-									<connection refLocalId="17" formalParameter="INOUT_LSR_ConnectionPoint"/>
-								</connectionPointIn>
-								<expression>LSR_ConnectionPoint</expression>
-							</outVariable>
-							<block width="59" height="52" typeName="ReSy104_ConnectMgTcpV06" instanceName="ReSy104_ConnectMgTcpV06_1" localId="17">
-								<position x="35" y="14"/>
+							<block width="54" height="72" typeName="ReSy10x_ConnectMgTcpV04" instanceName="ReSy10x_ConnectMgTcpV04_1" localId="20">
+								<position x="40" y="6"/>
 								<inputVariables>
 									<variable formalParameter="IN_LX_DisablePou" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
@@ -175,12 +138,13 @@
 									<variable formalParameter="IN_LX_IsPassive" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="12"/>
-											<connection refLocalId="20"/>
+											<connection refLocalId="1"/>
 										</connectionPointIn>
 									</variable>
 									<variable formalParameter="IN_LS15_Portnumber" dataType="ReSy10x_S15" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="16"/>
+											<connection refLocalId="24"/>
 										</connectionPointIn>
 									</variable>
 									<variable formalParameter="IN_LS20_IpAddress" dataType="ReSy10x_S20" hideable="true">
@@ -188,97 +152,111 @@
 											<relPosition x="-2" y="20"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LT_TimeoutConnect" dataType="TIME" hideable="true">
+									<variable formalParameter="IN_LT_T0" dataType="TIME" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="24"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LT_TimeoutSend" dataType="TIME" hideable="true">
+									<variable formalParameter="IN_LT_T1" dataType="TIME" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="28"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LT_TimeoutReceive" dataType="TIME" hideable="true">
+									<variable formalParameter="IN_LT_T2" dataType="TIME" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="32"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LT_DelayToSend" dataType="TIME" hideable="true">
+									<variable formalParameter="IN_LT_T3" dataType="TIME" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="36"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LX_DisableKeepAlive" dataType="BOOL" invertable="true" hideable="true">
+									<variable formalParameter="IN_LT_TimeoutConnect" dataType="TIME" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="40"/>
 										</connectionPointIn>
 									</variable>
-								</inputVariables>
-								<inOutVariables>
-									<variable formalParameter="INOUT_LSR_State" dataType="ReSyBasic_SR_StateConnectIp">
+									<variable formalParameter="IN_LT_TimeoutSend" dataType="TIME" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="44"/>
-											<connection refLocalId="0">
-												<position x="33" y="58" pathnode="false"/>
-												<position x="32" y="58" pathnode="false"/>
-											</connection>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LT_TimeoutReceive" dataType="TIME" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="48"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LT_DelayToSend" dataType="TIME" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="52"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LX_DisableKeepAlive" dataType="BOOL" invertable="true" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="56"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LX_RtrigUpdateAllParameters" dataType="BOOL" invertable="true" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="60"/>
+										</connectionPointIn>
+									</variable>
+								</inputVariables>
+								<inOutVariables>
+									<variable formalParameter="INOUT_LSR_State" dataType="ReSy10x_SR_ConMgState">
+										<connectionPointIn>
+											<relPosition x="-2" y="64"/>
+											<connection refLocalId="23"/>
 										</connectionPointIn>
 										<connectionPointOut>
-											<relPosition x="63" y="44"/>
+											<relPosition x="58" y="64"/>
 										</connectionPointOut>
 									</variable>
 									<variable formalParameter="INOUT_LSR_ConnectionPoint" dataType="ReSy10x_SR_ConnectionPoint">
 										<connectionPointIn>
-											<relPosition x="-2" y="48"/>
-											<connection refLocalId="2"/>
+											<relPosition x="-2" y="68"/>
+											<connection refLocalId="21"/>
 										</connectionPointIn>
 										<connectionPointOut>
-											<relPosition x="63" y="48"/>
+											<relPosition x="58" y="68"/>
 										</connectionPointOut>
 									</variable>
 								</inOutVariables>
 								<outputVariables/>
 							</block>
-							<inVariable localId="20" width="6" height="2">
-								<position x="27" y="25"/>
-								<connectionPointOut>
-									<relPosition x="6" y="1"/>
-								</connectionPointOut>
-								<expression>true</expression>
-							</inVariable>
-						</worksheet>
-						<worksheet name="Link" SizeX="400" SizeY="400">
-							<inVariable localId="0" width="20" height="2">
-								<position x="11" y="59"/>
+							<inVariable localId="21" width="20" height="2">
+								<position x="18" y="73"/>
 								<connectionPointOut>
 									<relPosition x="20" y="1"/>
 								</connectionPointOut>
-								<expression>LSR_ConnectionPoint</expression>
+								<expression>GSR_ConnectionPoint</expression>
 							</inVariable>
-							<outVariable localId="1" width="20" height="2">
-								<position x="94" y="59"/>
+							<outVariable localId="22" width="20" height="2">
+								<position x="96" y="73"/>
 								<connectionPointIn>
 									<relPosition x="0" y="1"/>
-									<connection refLocalId="15" formalParameter="INOUT_LSR_ConnectionPoint"/>
+									<connection refLocalId="20" formalParameter="INOUT_LSR_ConnectionPoint"/>
 								</connectionPointIn>
-								<expression>LSR_ConnectionPoint</expression>
+								<expression>GSR_ConnectionPoint</expression>
 							</outVariable>
-							<inVariable localId="2" width="21" height="2">
-								<position x="10" y="55"/>
+							<inVariable localId="23" width="25" height="2">
+								<position x="13" y="69"/>
 								<connectionPointOut>
-									<relPosition x="21" y="1"/>
+									<relPosition x="25" y="1"/>
 								</connectionPointOut>
-								<expression>LSR_StateLinkManager</expression>
+								<expression>LSR_StateConnectManager</expression>
 							</inVariable>
-							<outVariable localId="3" width="21" height="2">
-								<position x="94" y="55"/>
-								<connectionPointIn>
-									<relPosition x="0" y="1"/>
-									<connection refLocalId="15" formalParameter="INOUT_LSR_State"/>
-								</connectionPointIn>
-								<expression>LSR_StateLinkManager</expression>
-							</outVariable>
-							<block width="59" height="44" typeName="ReSy104_LinkManagerV03" instanceName="ReSy104_LinkManagerV03_1" localId="15">
+							<inVariable localId="24" width="8" height="2">
+								<position x="30" y="21"/>
+								<connectionPointOut>
+									<relPosition x="8" y="1"/>
+								</connectionPointOut>
+								<expression>'2404'</expression>
+							</inVariable>
+						</worksheet>
+						<worksheet name="Link" SizeX="400" SizeY="400">
+							<block width="55" height="44" typeName="ReSy10x_104LinkManagV03" instanceName="ReSy10x_104LinkManagV03_1" localId="11">
 								<position x="33" y="20"/>
 								<inputVariables>
 									<variable formalParameter="IN_LX_DisablePou" dataType="BOOL" invertable="true" hideable="true">
@@ -286,162 +264,223 @@
 											<relPosition x="-2" y="4"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LUSI_K" dataType="USINT" hideable="true">
+									<variable formalParameter="IN_LUSI_TerminalType" dataType="USINT" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="8"/>
+											<connection refLocalId="22"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LUSI_W" dataType="USINT" hideable="true">
+									<variable formalParameter="IN_LUSI_K" dataType="USINT" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="12"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LT_T0" dataType="TIME" hideable="true">
+									<variable formalParameter="IN_LUSI_W" dataType="USINT" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="16"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LT_T1" dataType="TIME" hideable="true">
+									<variable formalParameter="IN_LX_RtrigDeleteSendBuffer" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="20"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LT_T2" dataType="TIME" hideable="true">
-										<connectionPointIn>
-											<relPosition x="-2" y="24"/>
-										</connectionPointIn>
-									</variable>
-									<variable formalParameter="IN_LT_T3" dataType="TIME" hideable="true">
-										<connectionPointIn>
-											<relPosition x="-2" y="28"/>
-										</connectionPointIn>
-									</variable>
-									<variable formalParameter="IN_LX_WithoutTestFRact" dataType="BOOL" invertable="true" hideable="true">
-										<connectionPointIn>
-											<relPosition x="-2" y="32"/>
-										</connectionPointIn>
-									</variable>
 								</inputVariables>
 								<inOutVariables>
-									<variable formalParameter="INOUT_LSR_State" dataType="ReSy10x_SR_StateLinkManager">
+									<variable formalParameter="INOUT_LSR_SmartParameter" dataType="ReSyBasic_SR_NavServParameter">
 										<connectionPointIn>
-											<relPosition x="-2" y="36"/>
-											<connection refLocalId="2"/>
+											<relPosition x="-2" y="24"/>
+											<connection refLocalId="19"/>
 										</connectionPointIn>
 										<connectionPointOut>
-											<relPosition x="63" y="36"/>
+											<relPosition x="59" y="24"/>
+										</connectionPointOut>
+									</variable>
+									<variable formalParameter="INOUT_LSR_SmartState" dataType="ReSyBasic_SR_NavServerState">
+										<connectionPointIn>
+											<relPosition x="-2" y="28"/>
+											<connection refLocalId="17"/>
+										</connectionPointIn>
+										<connectionPointOut>
+											<relPosition x="59" y="28"/>
+										</connectionPointOut>
+									</variable>
+									<variable formalParameter="INOUT_LSR_State" dataType="ReSy10x_SR_104LinkMgState">
+										<connectionPointIn>
+											<relPosition x="-2" y="32"/>
+											<connection refLocalId="21"/>
+										</connectionPointIn>
+										<connectionPointOut>
+											<relPosition x="59" y="32"/>
 										</connectionPointOut>
 									</variable>
 									<variable formalParameter="INOUT_LSR_ConnectionPoint" dataType="ReSy10x_SR_ConnectionPoint">
 										<connectionPointIn>
-											<relPosition x="-2" y="40"/>
-											<connection refLocalId="0"/>
+											<relPosition x="-2" y="36"/>
+											<connection refLocalId="13"/>
 										</connectionPointIn>
 										<connectionPointOut>
-											<relPosition x="63" y="40"/>
+											<relPosition x="59" y="36"/>
+										</connectionPointOut>
+									</variable>
+									<variable formalParameter="INOUT_LSR_GlobalConnectPoint" dataType="ReSyBasic_SR_GlobalConnecPoint">
+										<connectionPointIn>
+											<relPosition x="-2" y="40"/>
+											<connection refLocalId="15"/>
+										</connectionPointIn>
+										<connectionPointOut>
+											<relPosition x="59" y="40"/>
 										</connectionPointOut>
 									</variable>
 								</inOutVariables>
 								<outputVariables/>
 							</block>
-						</worksheet>
-						<worksheet name="ObjektManager" SizeX="400" SizeY="400">
-							<inVariable localId="0" width="20" height="2">
-								<position x="24" y="128"/>
+							<outVariable localId="12" width="21" height="2">
+								<position x="90" y="51"/>
+								<connectionPointIn>
+									<relPosition x="0" y="1"/>
+									<connection refLocalId="11" formalParameter="INOUT_LSR_State"/>
+								</connectionPointIn>
+								<expression>LSR_StateLinkManager</expression>
+							</outVariable>
+							<inVariable localId="13" width="20" height="2">
+								<position x="11" y="55"/>
 								<connectionPointOut>
 									<relPosition x="20" y="1"/>
 								</connectionPointOut>
-								<expression>LSR_ConnectionPoint</expression>
+								<expression>GSR_ConnectionPoint</expression>
 							</inVariable>
-							<outVariable localId="1" width="20" height="2">
-								<position x="117" y="128"/>
+							<outVariable localId="14" width="20" height="2">
+								<position x="90" y="55"/>
 								<connectionPointIn>
 									<relPosition x="0" y="1"/>
-									<connection refLocalId="49" formalParameter="INOUT_LSR_ConnectionPoint"/>
+									<connection refLocalId="11" formalParameter="INOUT_LSR_ConnectionPoint"/>
 								</connectionPointIn>
-								<expression>LSR_ConnectionPoint</expression>
+								<expression>GSR_ConnectionPoint</expression>
 							</outVariable>
-							<inVariable localId="2" width="24" height="2">
-								<position x="20" y="124"/>
+							<inVariable localId="15" width="25" height="2">
+								<position x="6" y="59"/>
 								<connectionPointOut>
-									<relPosition x="24" y="1"/>
+									<relPosition x="25" y="1"/>
 								</connectionPointOut>
-								<expression>LSR_StateObjektManager</expression>
+								<expression>GSR_GlobalConnectionPoint</expression>
 							</inVariable>
-							<outVariable localId="3" width="24" height="2">
-								<position x="117" y="124"/>
+							<outVariable localId="16" width="25" height="2">
+								<position x="90" y="59"/>
 								<connectionPointIn>
 									<relPosition x="0" y="1"/>
-									<connection refLocalId="49" formalParameter="INOUT_LSR_State"/>
+									<connection refLocalId="11" formalParameter="INOUT_LSR_GlobalConnectPoint"/>
+								</connectionPointIn>
+								<expression>GSR_GlobalConnectionPoint</expression>
+							</outVariable>
+							<inVariable localId="17" width="16" height="2">
+								<position x="15" y="47"/>
+								<connectionPointOut>
+									<relPosition x="16" y="1"/>
+								</connectionPointOut>
+								<expression>LSR_SmartState</expression>
+							</inVariable>
+							<outVariable localId="18" width="16" height="2">
+								<position x="90" y="47"/>
+								<connectionPointIn>
+									<relPosition x="0" y="1"/>
+									<connection refLocalId="11" formalParameter="INOUT_LSR_SmartState"/>
+								</connectionPointIn>
+								<expression>LSR_SmartState</expression>
+							</outVariable>
+							<inVariable localId="19" width="20" height="2">
+								<position x="11" y="43"/>
+								<connectionPointOut>
+									<relPosition x="20" y="1"/>
+								</connectionPointOut>
+								<expression>LSR_SmartParameter</expression>
+							</inVariable>
+							<outVariable localId="20" width="20" height="2">
+								<position x="90" y="43"/>
+								<connectionPointIn>
+									<relPosition x="0" y="1"/>
+									<connection refLocalId="11" formalParameter="INOUT_LSR_SmartParameter"/>
+								</connectionPointIn>
+								<expression>LSR_SmartParameter</expression>
+							</outVariable>
+							<inVariable localId="21" width="21" height="2">
+								<position x="10" y="51"/>
+								<connectionPointOut>
+									<relPosition x="21" y="1"/>
+								</connectionPointOut>
+								<expression>LSR_StateLinkManager</expression>
+							</inVariable>
+							<inVariable localId="22" width="9" height="2">
+								<position x="22" y="27"/>
+								<connectionPointOut>
+									<relPosition x="9" y="1"/>
+								</connectionPointOut>
+								<expression>usint#2</expression>
+							</inVariable>
+						</worksheet>
+						<worksheet name="ObjektManager" SizeX="400" SizeY="400">
+							<outVariable localId="0" width="23" height="2">
+								<position x="108" y="176"/>
+								<connectionPointIn>
+									<relPosition x="0" y="1"/>
+									<connection refLocalId="56" formalParameter="INOUT_LSR_ObjectConnectPoint"/>
+								</connectionPointIn>
+								<expression>LSR_ObjConnectionPoint</expression>
+							</outVariable>
+							<outVariable localId="1" width="24" height="2">
+								<position x="108" y="172"/>
+								<connectionPointIn>
+									<relPosition x="0" y="1"/>
+									<connection refLocalId="56" formalParameter="INOUT_LSR_State"/>
 								</connectionPointIn>
 								<expression>LSR_StateObjektManager</expression>
 							</outVariable>
-							<inVariable localId="4" width="12" height="2">
-								<position x="32" y="120"/>
+							<inVariable localId="2" width="12" height="2">
+								<position x="32" y="168"/>
 								<connectionPointOut>
 									<relPosition x="12" y="1"/>
 								</connectionPointOut>
 								<expression>GSR_Clock</expression>
 							</inVariable>
-							<outVariable localId="5" width="12" height="2">
-								<position x="117" y="120"/>
+							<outVariable localId="3" width="12" height="2">
+								<position x="108" y="168"/>
 								<connectionPointIn>
 									<relPosition x="0" y="1"/>
-									<connection refLocalId="49" formalParameter="INOUT_LSR_Clock"/>
+									<connection refLocalId="56" formalParameter="INOUT_LSR_Clock"/>
 								</connectionPointIn>
 								<expression>GSR_Clock</expression>
 							</outVariable>
-							<inVariable localId="6" width="11" height="2">
-								<position x="33" y="96"/>
+							<inVariable localId="4" width="11" height="2">
+								<position x="33" y="148"/>
 								<connectionPointOut>
 									<relPosition x="11" y="1"/>
 								</connectionPointOut>
 								<expression>udint#100</expression>
 							</inVariable>
-							<inVariable localId="7" width="11" height="2">
-								<position x="33" y="100"/>
+							<inVariable localId="5" width="11" height="2">
+								<position x="33" y="152"/>
 								<connectionPointOut>
 									<relPosition x="11" y="1"/>
 								</connectionPointOut>
 								<expression>udint#100</expression>
 							</inVariable>
-							<inVariable localId="8" width="11" height="2">
-								<position x="33" y="104"/>
+							<inVariable localId="6" width="20" height="2">
+								<position x="24" y="180"/>
 								<connectionPointOut>
-									<relPosition x="11" y="1"/>
+									<relPosition x="20" y="1"/>
 								</connectionPointOut>
-								<expression>udint#100</expression>
+								<expression>GSR_ConnectionPoint</expression>
 							</inVariable>
-							<inVariable localId="9" width="11" height="2">
-								<position x="33" y="108"/>
-								<connectionPointOut>
-									<relPosition x="11" y="1"/>
-								</connectionPointOut>
-								<expression>udint#100</expression>
-							</inVariable>
-							<inVariable localId="10" width="6" height="2">
-								<position x="38" y="40"/>
-								<connectionPointOut>
-									<relPosition x="6" y="1"/>
-								</connectionPointOut>
-								<expression>true</expression>
-							</inVariable>
-							<inVariable localId="11" width="8" height="2">
-								<position x="36" y="20"/>
-								<connectionPointOut>
-									<relPosition x="8" y="1"/>
-								</connectionPointOut>
-								<expression>uint#2</expression>
-							</inVariable>
-							<inVariable localId="12" width="9" height="2">
-								<position x="35" y="92"/>
-								<connectionPointOut>
-									<relPosition x="9" y="1"/>
-								</connectionPointOut>
-								<expression>usint#0</expression>
-							</inVariable>
-							<block width="68" height="132" typeName="ReSy104_ObjectManagerV06" instanceName="ReSy104_ObjectManagerV06_1" localId="49">
-								<position x="47" y="5"/>
+							<outVariable localId="7" width="20" height="2">
+								<position x="108" y="180"/>
+								<connectionPointIn>
+									<relPosition x="0" y="1"/>
+									<connection refLocalId="56" formalParameter="INOUT_LSR_ConnectionPoint"/>
+								</connectionPointIn>
+								<expression>GSR_ConnectionPoint</expression>
+							</outVariable>
+							<block width="60" height="180" typeName="ReSy10x_104ObjManagerV01" instanceName="ReSy10x_104ObjManagerV01_1" localId="56">
+								<position x="46" y="5"/>
 								<inputVariables>
 									<variable formalParameter="IN_LX_DisablePou" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
@@ -458,13 +497,10 @@
 											<relPosition x="-2" y="12"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LUI_AsduAddressUnstructured" dataType="UINT" hideable="true">
+									<variable formalParameter="IN_LUI_AsduAddressUnstructured" flagType="UINT#1" dataType="UINT" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="16"/>
-											<connection refLocalId="11">
-												<position x="45" y="21" pathnode="false"/>
-												<position x="44" y="21" pathnode="false"/>
-											</connection>
+											<connection refLocalId="57"/>
 										</connectionPointIn>
 									</variable>
 									<variable formalParameter="IN_LUSI_AsduAddressStructuHigh" dataType="USINT" hideable="true">
@@ -490,10 +526,6 @@
 									<variable formalParameter="IN_LX_AutoTermination" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="36"/>
-											<connection refLocalId="10">
-												<position x="45" y="41" pathnode="false"/>
-												<position x="44" y="41" pathnode="false"/>
-											</connection>
 										</connectionPointIn>
 									</variable>
 									<variable formalParameter="IN_LT_BackgroundScanTime" dataType="TIME" hideable="true">
@@ -501,7 +533,7 @@
 											<relPosition x="-2" y="40"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LT_CommandTimeStandard" dataType="TIME" hideable="true">
+									<variable formalParameter="IN_LT_CommandTimeStandard" flagType="T#2s" dataType="TIME" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="44"/>
 										</connectionPointIn>
@@ -511,444 +543,290 @@
 											<relPosition x="-2" y="48"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LT_CommandTimeLong" dataType="TIME" hideable="true">
+									<variable formalParameter="IN_LT_CommandTimeLong" flagType="T#5s" dataType="TIME" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="52"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LX_WithoutEndOfInit" dataType="BOOL" invertable="true" hideable="true">
+									<variable formalParameter="IN_LDI_CommandMaxTimeDelay" dataType="DINT" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="56"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LX_WithoutConfirmation" dataType="BOOL" invertable="true" hideable="true">
+									<variable formalParameter="IN_LX_RtrigDeleteAllRegisters" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="60"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LX_WithoutTermination" dataType="BOOL" invertable="true" hideable="true">
+									<variable formalParameter="IN_LX_RtrigDeleteRegisterP1" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="64"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LX_RtrigDeleteAllRegister" dataType="BOOL" invertable="true" hideable="true">
+									<variable formalParameter="IN_LX_RtrigDeleteRegisterP2" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="68"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LI_ObjectTimestampType" dataType="INT" hideable="true">
+									<variable formalParameter="IN_LX_RtrigDeleteRegisterP3" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="72"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LT_DeviationTimeIntegralAZI" dataType="TIME" hideable="true">
+									<variable formalParameter="IN_LX_RtrigDeleteRegisterP4" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="76"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LT_DigitalFilterTime" dataType="TIME" hideable="true">
+									<variable formalParameter="IN_LX_WithoutEndOfInit" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="80"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LT_SupervisionForMidpoint" dataType="TIME" hideable="true">
+									<variable formalParameter="IN_LX_WithoutConfirmation" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="84"/>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LUSI_SystemType" dataType="USINT" hideable="true">
+									<variable formalParameter="IN_LX_WithoutTermination" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="88"/>
-											<connection refLocalId="12">
-												<position x="45" y="93" pathnode="false"/>
-												<position x="44" y="93" pathnode="false"/>
-											</connection>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LUDI_MaxNumDataNTNonRetain" dataType="UDINT" hideable="true">
+									<variable formalParameter="IN_LX_WithoutStackObjects" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="92"/>
-											<connection refLocalId="6">
-												<position x="45" y="97" pathnode="false"/>
-												<position x="44" y="97" pathnode="false"/>
-											</connection>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LUDI_MaxNumDataNTRetain" dataType="UDINT" hideable="true">
+									<variable formalParameter="IN_LX_DoubleTransmission" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="96"/>
-											<connection refLocalId="7">
-												<position x="45" y="101" pathnode="false"/>
-												<position x="44" y="101" pathnode="false"/>
-											</connection>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LUDI_MaxNumDataWTNonRetain" dataType="UDINT" hideable="true">
+									<variable formalParameter="IN_LX_DisableSaftyObjects" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="100"/>
-											<connection refLocalId="8">
-												<position x="45" y="105" pathnode="false"/>
-												<position x="44" y="105" pathnode="false"/>
-											</connection>
 										</connectionPointIn>
 									</variable>
-									<variable formalParameter="IN_LUDI_MaxNumDataWTRetain" dataType="UDINT" hideable="true">
+									<variable formalParameter="IN_LX_RequestAllowedWithTime" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="104"/>
-											<connection refLocalId="9">
-												<position x="45" y="109" pathnode="false"/>
-												<position x="44" y="109" pathnode="false"/>
-											</connection>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LX_CommandConfirmModeNeg" dataType="BOOL" invertable="true" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="108"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LX_DeactivateSequenceSQ1" dataType="BOOL" invertable="true" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="112"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LUSI_OriginatorAddress" dataType="USINT" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="116"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LUSI_ModeSelectExecute" dataType="USINT" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="120"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LUDI_ClockMaxMinutesNonSync" dataType="UDINT" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="124"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LI_ObjectTimestampType" dataType="INT" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="128"/>
+											<connection refLocalId="58"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LT_DeviationTimeIntegralAZI" dataType="TIME" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="132"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LT_DigitalFilterTime" dataType="TIME" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="136"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LT_SupervisionForMidpoint" dataType="TIME" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="140"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LUDI_MaxRegDataP4NonRetain" dataType="UDINT" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="144"/>
+											<connection refLocalId="4"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LUDI_MaxRegDataP4Retain" dataType="UDINT" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="148"/>
+											<connection refLocalId="5"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LUSI_SystemType" dataType="USINT" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="152"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LUSI_IntegratedTotalMode" dataType="USINT" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="156"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LX_SetUpdateAllParameters" dataType="BOOL" invertable="true" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="160"/>
 										</connectionPointIn>
 									</variable>
 								</inputVariables>
 								<inOutVariables>
-									<variable formalParameter="INOUT_LSR_NavigatorParameter" dataType="ReSyBasic_SR_NavServParameter">
+									<variable formalParameter="INOUT_LSR_Clock" dataType="ReSyBasic_SR_Clock">
 										<connectionPointIn>
-											<relPosition x="-2" y="108"/>
-											<connection refLocalId="62"/>
+											<relPosition x="-2" y="164"/>
+											<connection refLocalId="2"/>
 										</connectionPointIn>
 										<connectionPointOut>
-											<relPosition x="72" y="108"/>
+											<relPosition x="64" y="164"/>
 										</connectionPointOut>
 									</variable>
-									<variable formalParameter="INOUT_LSR_NavigatorState" dataType="ReSyBasic_SR_NavServerState">
+									<variable formalParameter="INOUT_LSR_State" dataType="ReSy10x_SR_ObjMgState">
 										<connectionPointIn>
-											<relPosition x="-2" y="112"/>
+											<relPosition x="-2" y="168"/>
+											<connection refLocalId="59"/>
+										</connectionPointIn>
+										<connectionPointOut>
+											<relPosition x="64" y="168"/>
+										</connectionPointOut>
+									</variable>
+									<variable formalParameter="INOUT_LSR_ObjectConnectPoint" dataType="ReSy10x_SR_ObjectConnectPoint">
+										<connectionPointIn>
+											<relPosition x="-2" y="172"/>
 											<connection refLocalId="60"/>
 										</connectionPointIn>
 										<connectionPointOut>
-											<relPosition x="72" y="112"/>
+											<relPosition x="64" y="172"/>
 										</connectionPointOut>
 									</variable>
-									<variable formalParameter="INOUT_LSR_Clock" dataType="ReSyBasic_SR_Clock">
+									<variable formalParameter="INOUT_LSR_ConnectionPoint" dataType="ReSy10x_SR_ConnectionPoint">
 										<connectionPointIn>
-											<relPosition x="-2" y="116"/>
-											<connection refLocalId="4">
-												<position x="45" y="121" pathnode="false"/>
-												<position x="44" y="121" pathnode="false"/>
-											</connection>
+											<relPosition x="-2" y="176"/>
+											<connection refLocalId="6"/>
 										</connectionPointIn>
 										<connectionPointOut>
-											<relPosition x="72" y="116"/>
-										</connectionPointOut>
-									</variable>
-									<variable formalParameter="INOUT_LSR_State" dataType="ReSy104_SR_StateObjectMg">
-										<connectionPointIn>
-											<relPosition x="-2" y="120"/>
-											<connection refLocalId="2">
-												<position x="45" y="125" pathnode="false"/>
-												<position x="44" y="125" pathnode="false"/>
-											</connection>
-										</connectionPointIn>
-										<connectionPointOut>
-											<relPosition x="72" y="120"/>
-										</connectionPointOut>
-									</variable>
-									<variable formalParameter="INOUT_LSR_ConnectionPoint" dataType="ReSy104_SR_ConnectionPoint">
-										<connectionPointIn>
-											<relPosition x="-2" y="124"/>
-											<connection refLocalId="0">
-												<position x="45" y="129" pathnode="false"/>
-												<position x="44" y="129" pathnode="false"/>
-											</connection>
-										</connectionPointIn>
-										<connectionPointOut>
-											<relPosition x="72" y="124"/>
-										</connectionPointOut>
-									</variable>
-									<variable formalParameter="INOUT_LSR_GlobalConnectPoint" dataType="ReSyBasic_SR_GlobalConnecPoint">
-										<connectionPointIn>
-											<relPosition x="-2" y="128"/>
-											<connection refLocalId="64"/>
-										</connectionPointIn>
-										<connectionPointOut>
-											<relPosition x="72" y="128"/>
+											<relPosition x="64" y="176"/>
 										</connectionPointOut>
 									</variable>
 								</inOutVariables>
 								<outputVariables>
 									<variable formalParameter="OUT_LX_DemoModeActive" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointOut>
-											<relPosition x="70" y="4"/>
+											<relPosition x="62" y="4"/>
 										</connectionPointOut>
 									</variable>
 									<variable formalParameter="OUT_LX_FlashDemoModeFinished" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointOut>
-											<relPosition x="70" y="8"/>
+											<relPosition x="62" y="8"/>
 										</connectionPointOut>
 									</variable>
 									<variable formalParameter="OUT_LR_EndDemoModeHours" dataType="REAL" hideable="true">
 										<connectionPointOut>
-											<relPosition x="70" y="12"/>
+											<relPosition x="62" y="12"/>
 										</connectionPointOut>
 									</variable>
 								</outputVariables>
 							</block>
-							<inVariable localId="60" width="15" height="2">
-								<position x="30" y="116"/>
+							<inVariable localId="57" width="10" height="2">
+								<position x="34" y="20"/>
 								<connectionPointOut>
-									<relPosition x="15" y="1"/>
+									<relPosition x="10" y="1"/>
 								</connectionPointOut>
-								<expression>LSR_NavState</expression>
+								<expression>UINT#2</expression>
 							</inVariable>
-							<outVariable localId="61" width="15" height="2">
-								<position x="117" y="116"/>
-								<connectionPointIn>
-									<relPosition x="0" y="1"/>
-									<connection refLocalId="49" formalParameter="INOUT_LSR_NavigatorState"/>
-								</connectionPointIn>
-								<expression>LSR_NavState</expression>
-							</outVariable>
-							<inVariable localId="62" width="19" height="2">
-								<position x="26" y="112"/>
+							<inVariable localId="58" width="7" height="2">
+								<position x="37" y="132"/>
 								<connectionPointOut>
-									<relPosition x="19" y="1"/>
+									<relPosition x="7" y="1"/>
 								</connectionPointOut>
-								<expression>LSR_NavParameter</expression>
+								<expression>int#2</expression>
 							</inVariable>
-							<outVariable localId="63" width="19" height="2">
-								<position x="117" y="112"/>
-								<connectionPointIn>
-									<relPosition x="0" y="1"/>
-									<connection refLocalId="49" formalParameter="INOUT_LSR_NavigatorParameter"/>
-								</connectionPointIn>
-								<expression>LSR_NavParameter</expression>
-							</outVariable>
-							<inVariable localId="64" width="23" height="2">
-								<position x="22" y="132"/>
+							<inVariable localId="59" width="24" height="2">
+								<position x="20" y="172"/>
+								<connectionPointOut>
+									<relPosition x="24" y="1"/>
+								</connectionPointOut>
+								<expression>LSR_StateObjektManager</expression>
+							</inVariable>
+							<inVariable localId="60" width="23" height="2">
+								<position x="21" y="176"/>
 								<connectionPointOut>
 									<relPosition x="23" y="1"/>
 								</connectionPointOut>
-								<expression>GSR_GlobalConnectPoint</expression>
-							</inVariable>
-							<outVariable localId="65" width="23" height="2">
-								<position x="117" y="132"/>
-								<connectionPointIn>
-									<relPosition x="0" y="1"/>
-									<connection refLocalId="49" formalParameter="INOUT_LSR_GlobalConnectPoint"/>
-								</connectionPointIn>
-								<expression>GSR_GlobalConnectPoint</expression>
-							</outVariable>
-							<outVariable localId="66" width="29" height="2">
-								<position x="67" y="144"/>
-								<connectionPointIn>
-									<relPosition x="0" y="1"/>
-									<connection refLocalId="67">
-										<position x="67" y="145" pathnode="false"/>
-										<position x="59" y="145" pathnode="false"/>
-									</connection>
-								</connectionPointIn>
-								<expression>LSR_NavParameter.UDI_PortNo</expression>
-							</outVariable>
-							<inVariable localId="67" width="13" height="2">
-								<position x="46" y="144"/>
-								<connectionPointOut>
-									<relPosition x="13" y="1"/>
-								</connectionPointOut>
-								<expression>udint#55556</expression>
+								<expression>LSR_ObjConnectionPoint</expression>
 							</inVariable>
 						</worksheet>
 						<worksheet name="CxSC_SingleCommand" SizeX="400" SizeY="400">
-							<block width="61" height="40" typeName="ReSy104_CxSCxSingleCoV01" instanceName="ReSy104_CxSCxSingleCoV01_1" localId="10">
-								<position x="39" y="15"/>
-								<inputVariables>
-									<variable formalParameter="IN_LX_DisablePou" dataType="BOOL" invertable="true" hideable="true">
-										<connectionPointIn>
-											<relPosition x="-2" y="4"/>
-										</connectionPointIn>
-									</variable>
-									<variable formalParameter="IN_LUSI_ObjectType" dataType="USINT" hideable="true">
-										<connectionPointIn>
-											<relPosition x="-2" y="8"/>
-											<connection refLocalId="18"/>
-										</connectionPointIn>
-									</variable>
-									<variable formalParameter="IN_LUDI_AddressUnstructured" dataType="UDINT" hideable="true">
-										<connectionPointIn>
-											<relPosition x="-2" y="12"/>
-											<connection refLocalId="17"/>
-										</connectionPointIn>
-									</variable>
-									<variable formalParameter="IN_LUSI_AddressStructuredHigh" dataType="USINT" hideable="true">
-										<connectionPointIn>
-											<relPosition x="-2" y="16"/>
-										</connectionPointIn>
-									</variable>
-									<variable formalParameter="IN_LUSI_AddressStructuredMid" dataType="USINT" hideable="true">
-										<connectionPointIn>
-											<relPosition x="-2" y="20"/>
-										</connectionPointIn>
-									</variable>
-									<variable formalParameter="IN_LUSI_AddressStructuredLow" dataType="USINT" hideable="true">
-										<connectionPointIn>
-											<relPosition x="-2" y="24"/>
-										</connectionPointIn>
-									</variable>
-								</inputVariables>
-								<inOutVariables>
-									<variable formalParameter="INOUT_LX_ScsValue" dataType="BOOL">
-										<connectionPointIn>
-											<relPosition x="-2" y="28"/>
-											<connection refLocalId="15"/>
-										</connectionPointIn>
-										<connectionPointOut>
-											<relPosition x="65" y="28"/>
-										</connectionPointOut>
-									</variable>
-									<variable formalParameter="INOUT_LSR_ParameterState" dataType="ReSy104_SR_ObjParamStateSCO">
-										<connectionPointIn>
-											<relPosition x="-2" y="32"/>
-											<connection refLocalId="13"/>
-										</connectionPointIn>
-										<connectionPointOut>
-											<relPosition x="65" y="32"/>
-										</connectionPointOut>
-									</variable>
-									<variable formalParameter="INOUT_LSR_ConnectionPoint" dataType="ReSy104_SR_ConnectionPoint">
-										<connectionPointIn>
-											<relPosition x="-2" y="36"/>
-											<connection refLocalId="11"/>
-										</connectionPointIn>
-										<connectionPointOut>
-											<relPosition x="65" y="36"/>
-										</connectionPointOut>
-									</variable>
-								</inOutVariables>
-								<outputVariables/>
-							</block>
-							<inVariable localId="11" width="20" height="2">
-								<position x="17" y="50"/>
+							<inVariable localId="0" width="23" height="2">
+								<position x="22" y="56"/>
 								<connectionPointOut>
-									<relPosition x="20" y="1"/>
+									<relPosition x="23" y="1"/>
 								</connectionPointOut>
-								<expression>LSR_ConnectionPoint</expression>
+								<expression>LSR_ObjConnectionPoint</expression>
 							</inVariable>
-							<outVariable localId="12" width="20" height="2">
-								<position x="102" y="50"/>
+							<outVariable localId="1" width="23" height="2">
+								<position x="106" y="56"/>
 								<connectionPointIn>
 									<relPosition x="0" y="1"/>
-									<connection refLocalId="10" formalParameter="INOUT_LSR_ConnectionPoint"/>
+									<connection refLocalId="17" formalParameter="INOUT_LSR_ObjectConnectPoint"/>
 								</connectionPointIn>
-								<expression>LSR_ConnectionPoint</expression>
+								<expression>LSR_ObjConnectionPoint</expression>
 							</outVariable>
-							<inVariable localId="13" width="25" height="2">
-								<position x="12" y="46"/>
-								<connectionPointOut>
-									<relPosition x="25" y="1"/>
-								</connectionPointOut>
-								<expression>CxSC_LSR_ParameterState</expression>
-							</inVariable>
-							<outVariable localId="14" width="25" height="2">
-								<position x="102" y="46"/>
+							<outVariable localId="2" width="25" height="2">
+								<position x="106" y="52"/>
 								<connectionPointIn>
 									<relPosition x="0" y="1"/>
-									<connection refLocalId="10" formalParameter="INOUT_LSR_ParameterState"/>
+									<connection refLocalId="17" formalParameter="INOUT_LSR_ParameterState"/>
 								</connectionPointIn>
 								<expression>CxSC_LSR_ParameterState</expression>
 							</outVariable>
-							<inVariable localId="15" width="16" height="2">
-								<position x="21" y="42"/>
+							<inVariable localId="3" width="16" height="2">
+								<position x="29" y="48"/>
 								<connectionPointOut>
 									<relPosition x="16" y="1"/>
 								</connectionPointOut>
 								<expression>CxSC_LX_Value</expression>
 							</inVariable>
-							<outVariable localId="16" width="16" height="2">
-								<position x="102" y="42"/>
+							<outVariable localId="4" width="16" height="2">
+								<position x="106" y="48"/>
 								<connectionPointIn>
 									<relPosition x="0" y="1"/>
-									<connection refLocalId="10" formalParameter="INOUT_LX_ScsValue"/>
+									<connection refLocalId="17" formalParameter="INOUT_LX_SpiValue"/>
 								</connectionPointIn>
 								<expression>CxSC_LX_Value</expression>
 							</outVariable>
-							<inVariable localId="17" width="10" height="2">
-								<position x="27" y="26"/>
+							<inVariable localId="5" width="10" height="2">
+								<position x="35" y="32"/>
 								<connectionPointOut>
 									<relPosition x="10" y="1"/>
 								</connectionPointOut>
 								<expression>udint#58</expression>
 							</inVariable>
-							<inVariable localId="18" width="10" height="2">
-								<position x="27" y="22"/>
+							<inVariable localId="6" width="10" height="2">
+								<position x="35" y="28"/>
 								<connectionPointOut>
 									<relPosition x="10" y="1"/>
 								</connectionPointOut>
 								<expression>usint#58</expression>
 							</inVariable>
-							<inVariable localId="19" width="20" height="2">
-								<position x="27" y="83"/>
-								<connectionPointOut>
-									<relPosition x="20" y="1"/>
-								</connectionPointOut>
-								<expression>LSR_ConnectionPoint</expression>
-							</inVariable>
-							<outVariable localId="20" width="20" height="2">
-								<position x="102" y="83"/>
-								<connectionPointIn>
-									<relPosition x="0" y="1"/>
-									<connection refLocalId="28" formalParameter="INOUT_LSR_ConnectionPoint"/>
-								</connectionPointIn>
-								<expression>LSR_ConnectionPoint</expression>
-							</outVariable>
-							<inVariable localId="21" width="11" height="2">
-								<position x="36" y="75"/>
-								<connectionPointOut>
-									<relPosition x="11" y="1"/>
-								</connectionPointOut>
-								<expression>xReady58</expression>
-							</inVariable>
-							<inVariable localId="22" width="16" height="2">
-								<position x="31" y="79"/>
-								<connectionPointOut>
-									<relPosition x="16" y="1"/>
-								</connectionPointOut>
-								<expression>CxSC_LX_Value</expression>
-							</inVariable>
-							<outVariable localId="23" width="16" height="2">
-								<position x="102" y="79"/>
-								<connectionPointIn>
-									<relPosition x="0" y="1"/>
-									<connection refLocalId="28" formalParameter="INOUT_LX_ScsValue"/>
-								</connectionPointIn>
-								<expression>CxSC_LX_Value</expression>
-							</outVariable>
-							<block width="51" height="16" typeName="ReadyToExecuteCommand" instanceName="ReadyToExecuteCommand58" localId="28">
-								<position x="49" y="72"/>
-								<inputVariables>
-									<variable formalParameter="xReady" dataType="BOOL" invertable="true" hideable="true">
-										<connectionPointIn>
-											<relPosition x="-2" y="4"/>
-											<connection refLocalId="21"/>
-										</connectionPointIn>
-									</variable>
-								</inputVariables>
-								<inOutVariables>
-									<variable formalParameter="INOUT_LX_ScsValue" dataType="BOOL">
-										<connectionPointIn>
-											<relPosition x="-2" y="8"/>
-											<connection refLocalId="22"/>
-										</connectionPointIn>
-										<connectionPointOut>
-											<relPosition x="55" y="8"/>
-										</connectionPointOut>
-									</variable>
-									<variable formalParameter="INOUT_LSR_ConnectionPoint" dataType="ReSy104_SR_ConnectionPoint">
-										<connectionPointIn>
-											<relPosition x="-2" y="12"/>
-											<connection refLocalId="19"/>
-										</connectionPointIn>
-										<connectionPointOut>
-											<relPosition x="55" y="12"/>
-										</connectionPointOut>
-									</variable>
-								</inOutVariables>
-								<outputVariables/>
-							</block>
-						</worksheet>
-						<worksheet name="CxSE_SetPointFloating" SizeX="400" SizeY="400">
-							<block width="61" height="40" typeName="ReSy104_CxSExFloatV01" instanceName="ReSy104_CxSExFloatV01_1" localId="10">
-								<position x="36" y="17"/>
+							<block width="57" height="40" typeName="ReSy10x_CxSCxSingleCoV10" instanceName="ReSy10x_CxSCxSingleCoV10_1" localId="17">
+								<position x="47" y="21"/>
 								<inputVariables>
 									<variable formalParameter="IN_LX_DisablePou" dataType="BOOL" invertable="true" hideable="true">
 										<connectionPointIn>
@@ -958,13 +836,13 @@
 									<variable formalParameter="IN_LUSI_ObjectType" dataType="USINT" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="8"/>
-											<connection refLocalId="18"/>
+											<connection refLocalId="6"/>
 										</connectionPointIn>
 									</variable>
 									<variable formalParameter="IN_LUDI_AddressUnstructured" dataType="UDINT" hideable="true">
 										<connectionPointIn>
 											<relPosition x="-2" y="12"/>
-											<connection refLocalId="17"/>
+											<connection refLocalId="5"/>
 										</connectionPointIn>
 									</variable>
 									<variable formalParameter="IN_LUSI_AddressStructuredHigh" dataType="USINT" hideable="true">
@@ -984,94 +862,79 @@
 									</variable>
 								</inputVariables>
 								<inOutVariables>
-									<variable formalParameter="INOUT_LR_Value" dataType="REAL">
+									<variable formalParameter="INOUT_LX_SpiValue" dataType="BOOL">
 										<connectionPointIn>
 											<relPosition x="-2" y="28"/>
-											<connection refLocalId="15"/>
+											<connection refLocalId="3"/>
 										</connectionPointIn>
 										<connectionPointOut>
-											<relPosition x="65" y="28"/>
+											<relPosition x="61" y="28"/>
 										</connectionPointOut>
 									</variable>
-									<variable formalParameter="INOUT_LSR_ParameterState" dataType="ReSy104_SR_ObjParamStateQOS">
+									<variable formalParameter="INOUT_LSR_ParameterState" dataType="ReSy10x_SR_ObjParamStateSCO">
 										<connectionPointIn>
 											<relPosition x="-2" y="32"/>
-											<connection refLocalId="13"/>
+											<connection refLocalId="24"/>
 										</connectionPointIn>
 										<connectionPointOut>
-											<relPosition x="65" y="32"/>
+											<relPosition x="61" y="32"/>
 										</connectionPointOut>
 									</variable>
-									<variable formalParameter="INOUT_LSR_ConnectionPoint" dataType="ReSy104_SR_ConnectionPoint">
+									<variable formalParameter="INOUT_LSR_ObjectConnectPoint" dataType="ReSy10x_SR_ObjectConnectPoint">
 										<connectionPointIn>
 											<relPosition x="-2" y="36"/>
-											<connection refLocalId="11"/>
+											<connection refLocalId="0"/>
 										</connectionPointIn>
 										<connectionPointOut>
-											<relPosition x="65" y="36"/>
+											<relPosition x="61" y="36"/>
 										</connectionPointOut>
 									</variable>
 								</inOutVariables>
 								<outputVariables/>
 							</block>
-							<inVariable localId="11" width="20" height="2">
-								<position x="14" y="52"/>
+							<inVariable localId="18" width="11" height="2">
+								<position x="34" y="10"/>
 								<connectionPointOut>
-									<relPosition x="20" y="1"/>
+									<relPosition x="11" y="1"/>
 								</connectionPointOut>
-								<expression>LSR_ConnectionPoint</expression>
+								<expression>xReady58</expression>
 							</inVariable>
-							<outVariable localId="12" width="20" height="2">
-								<position x="99" y="52"/>
+							<outVariable localId="19" width="58" height="2">
+								<position x="73" y="10"/>
 								<connectionPointIn>
 									<relPosition x="0" y="1"/>
-									<connection refLocalId="10" formalParameter="INOUT_LSR_ConnectionPoint"/>
+									<connection refLocalId="22" formalParameter="NOT">
+										<position x="73" y="11" pathnode="false"/>
+										<position x="57" y="11" pathnode="false"/>
+									</connection>
 								</connectionPointIn>
-								<expression>LSR_ConnectionPoint</expression>
+								<expression>CxSC_LSR_ParameterState.SR_Support.SR_SendData.B_Control.X2</expression>
 							</outVariable>
-							<inVariable localId="13" width="27" height="2">
-								<position x="7" y="48"/>
+							<block width="8" height="8" typeName="NOT" localId="22">
+								<position x="47" y="7"/>
+								<inputVariables>
+									<variable formalParameter="IN1" hidden="true" dataType="ANY_BIT" invertable="true" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="4"/>
+											<connection refLocalId="18"/>
+										</connectionPointIn>
+									</variable>
+								</inputVariables>
+								<inOutVariables/>
+								<outputVariables>
+									<variable formalParameter="NOT" hidden="true" dataType="ANY_BIT" invertable="true" hideable="true">
+										<connectionPointOut>
+											<relPosition x="10" y="4"/>
+										</connectionPointOut>
+									</variable>
+								</outputVariables>
+							</block>
+							<inVariable localId="24" width="25" height="2">
+								<position x="20" y="52"/>
 								<connectionPointOut>
-									<relPosition x="27" y="1"/>
+									<relPosition x="25" y="1"/>
 								</connectionPointOut>
-								<expression>CxSExFl_LSR_ParameterState</expression>
-							</inVariable>
-							<outVariable localId="14" width="27" height="2">
-								<position x="99" y="48"/>
-								<connectionPointIn>
-									<relPosition x="0" y="1"/>
-									<connection refLocalId="10" formalParameter="INOUT_LSR_ParameterState"/>
-								</connectionPointIn>
-								<expression>CxSExFl_LSR_ParameterState</expression>
-							</outVariable>
-							<inVariable localId="15" width="18" height="2">
-								<position x="16" y="44"/>
-								<connectionPointOut>
-									<relPosition x="18" y="1"/>
-								</connectionPointOut>
-								<expression>CxSExFl_LR_Value</expression>
-							</inVariable>
-							<outVariable localId="16" width="18" height="2">
-								<position x="99" y="44"/>
-								<connectionPointIn>
-									<relPosition x="0" y="1"/>
-									<connection refLocalId="10" formalParameter="INOUT_LR_Value"/>
-								</connectionPointIn>
-								<expression>CxSExFl_LR_Value</expression>
-							</outVariable>
-							<inVariable localId="17" width="10" height="2">
-								<position x="24" y="28"/>
-								<connectionPointOut>
-									<relPosition x="10" y="1"/>
-								</connectionPointOut>
-								<expression>udint#63</expression>
-							</inVariable>
-							<inVariable localId="18" width="10" height="2">
-								<position x="24" y="24"/>
-								<connectionPointOut>
-									<relPosition x="10" y="1"/>
-								</connectionPointOut>
-								<expression>usint#63</expression>
+								<expression>CxSC_LSR_ParameterState</expression>
 							</inVariable>
 						</worksheet>
 					</FBD>
