@@ -1,6 +1,6 @@
 <project xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.kw-software.com/xml/PLCopen/TC6_XML_V10_KW.xsd">
 	<fileHeader companyName="Phoenix Contact" companyURL="https://www.phoenixcontact-software.com" productName="PC WORX" productVersion="6.30" productRelease="Build 500" creationDateTime="2019-04-15T16:09:41" contentDescription="###XMLINFO=2;1;"/>
-	<contentHeader name="resy104-confirmation" version="1559140194" modificationDateTime="2019-05-29T17:29:54" connectionCheck="true">
+	<contentHeader name="resy104-confirmation" version="1559630671" modificationDateTime="2019-06-04T09:44:31" connectionCheck="true">
 		<coordinateInfo>
 			<pageSize x="999" y="9999"/>
 			<fbd>
@@ -17,7 +17,7 @@
 	<types>
 		<dataTypes/>
 		<pous>
-			<pou name="ReSy104_Ex_RtuSelect" pouType="program" lastChange="2019-05-29T17:29:54">
+			<pou name="ReSy104_Ex_RtuSelect" pouType="program" lastChange="2019-06-04T09:44:31">
 				<interface>
 					<localVars retain="false">
 						<variable name="ReSy10x_ConnectMgTcpV04_1" group="FB">
@@ -38,6 +38,31 @@
 						<variable name="ReSy10x_CxSCxSingleCoV10_1" group="FB">
 							<type>
 								<derived name="ReSy10x_CxSCxSingleCoV10"/>
+							</type>
+						</variable>
+						<variable name="ReSy10x_CxSExFloatV10_1" group="FB">
+							<type>
+								<derived name="ReSy10x_CxSExFloatV10"/>
+							</type>
+						</variable>
+						<variable name="CSEF1_LSR_ParameterState" group="FB">
+							<type>
+								<derived name="ReSy10x_SR_ObjParamStateSE"/>
+							</type>
+						</variable>
+						<variable name="SetpointChecker" group="FB">
+							<type>
+								<derived name="SetpointChecker"/>
+							</type>
+						</variable>
+						<variable name="GetSetpointValue" group="FB">
+							<type>
+								<derived name="GetSetpointValue"/>
+							</type>
+						</variable>
+						<variable name="rNewSetpointValue" group="FB">
+							<type>
+								<REAL/>
 							</type>
 						</variable>
 						<variable name="xReady58" group="Internal">
@@ -83,6 +108,11 @@
 						<variable name="LSR_ObjConnectionPoint" group="Internal">
 							<type>
 								<derived name="ReSy10x_SR_ObjectConnectPoint"/>
+							</type>
+						</variable>
+						<variable name="CSEF1_LR_Value" group="Internal">
+							<type>
+								<REAL/>
 							</type>
 						</variable>
 					</localVars>
@@ -936,6 +966,260 @@
 								</connectionPointOut>
 								<expression>CxSC_LSR_ParameterState</expression>
 							</inVariable>
+						</worksheet>
+						<worksheet name="C_SE_Float" SizeX="250" SizeY="999">
+							<inVariable localId="0" width="12" height="2">
+								<position x="20" y="57"/>
+								<connectionPointOut>
+									<relPosition x="12" y="1"/>
+								</connectionPointOut>
+								<expression>UDINT#63</expression>
+							</inVariable>
+							<outVariable localId="1" width="23" height="2">
+								<position x="94" y="81"/>
+								<connectionPointIn>
+									<relPosition x="0" y="1"/>
+									<connection refLocalId="16" formalParameter="INOUT_LSR_ObjectConnectPoint"/>
+								</connectionPointIn>
+								<expression>LSR_ObjConnectionPoint</expression>
+							</outVariable>
+							<inVariable localId="2" width="23" height="2">
+								<position x="10" y="81"/>
+								<connectionPointOut>
+									<relPosition x="23" y="1"/>
+								</connectionPointOut>
+								<expression>LSR_ObjConnectionPoint</expression>
+							</inVariable>
+							<outVariable localId="3" width="26" height="2">
+								<position x="94" y="77"/>
+								<connectionPointIn>
+									<relPosition x="0" y="1"/>
+									<connection refLocalId="16" formalParameter="INOUT_LSR_ParameterState"/>
+								</connectionPointIn>
+								<expression>CSEF1_LSR_ParameterState</expression>
+							</outVariable>
+							<inVariable localId="4" width="17" height="2">
+								<position x="16" y="73"/>
+								<connectionPointOut>
+									<relPosition x="17" y="1"/>
+								</connectionPointOut>
+								<expression>CSEF1_LR_Value</expression>
+							</inVariable>
+							<outVariable localId="5" width="17" height="2">
+								<position x="94" y="73"/>
+								<connectionPointIn>
+									<relPosition x="0" y="1"/>
+									<connection refLocalId="16" formalParameter="INOUT_LR_Value"/>
+								</connectionPointIn>
+								<expression>CSEF1_LR_Value</expression>
+							</outVariable>
+							<block width="57" height="40" typeName="ReSy10x_CxSExFloatV10" instanceName="ReSy10x_CxSExFloatV10_1" localId="16">
+								<position x="35" y="46"/>
+								<inputVariables>
+									<variable formalParameter="IN_LX_DisablePou" dataType="BOOL" invertable="true" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="4"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LUSI_ObjectType" dataType="USINT" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="8"/>
+											<connection refLocalId="19"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LUDI_AddressUnstructured" dataType="UDINT" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="12"/>
+											<connection refLocalId="0">
+												<position x="33" y="58" pathnode="false"/>
+												<position x="32" y="58" pathnode="false"/>
+											</connection>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LUSI_AddressStructuredHigh" dataType="USINT" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="16"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LUSI_AddressStructuredMid" dataType="USINT" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="20"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="IN_LUSI_AddressStructuredLow" dataType="USINT" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="24"/>
+										</connectionPointIn>
+									</variable>
+								</inputVariables>
+								<inOutVariables>
+									<variable formalParameter="INOUT_LR_Value" dataType="REAL">
+										<connectionPointIn>
+											<relPosition x="-2" y="28"/>
+											<connection refLocalId="4"/>
+										</connectionPointIn>
+										<connectionPointOut>
+											<relPosition x="61" y="28"/>
+										</connectionPointOut>
+									</variable>
+									<variable formalParameter="INOUT_LSR_ParameterState" dataType="ReSy10x_SR_ObjParamStateSE">
+										<connectionPointIn>
+											<relPosition x="-2" y="32"/>
+											<connection refLocalId="18"/>
+										</connectionPointIn>
+										<connectionPointOut>
+											<relPosition x="61" y="32"/>
+										</connectionPointOut>
+									</variable>
+									<variable formalParameter="INOUT_LSR_ObjectConnectPoint" dataType="ReSy10x_SR_ObjectConnectPoint">
+										<connectionPointIn>
+											<relPosition x="-2" y="36"/>
+											<connection refLocalId="2"/>
+										</connectionPointIn>
+										<connectionPointOut>
+											<relPosition x="61" y="36"/>
+										</connectionPointOut>
+									</variable>
+								</inOutVariables>
+								<outputVariables/>
+							</block>
+							<inVariable localId="18" width="26" height="2">
+								<position x="7" y="77"/>
+								<connectionPointOut>
+									<relPosition x="26" y="1"/>
+								</connectionPointOut>
+								<expression>CSEF1_LSR_ParameterState</expression>
+							</inVariable>
+							<inVariable localId="19" width="12" height="2">
+								<position x="21" y="53"/>
+								<connectionPointOut>
+									<relPosition x="12" y="1"/>
+								</connectionPointOut>
+								<expression>USINT#63</expression>
+							</inVariable>
+							<inVariable localId="20" width="7" height="2">
+								<position x="26" y="36"/>
+								<connectionPointOut>
+									<relPosition x="7" y="1"/>
+								</connectionPointOut>
+								<expression>15.0</expression>
+							</inVariable>
+							<inVariable localId="21" width="17" height="2">
+								<position x="16" y="32"/>
+								<connectionPointOut>
+									<relPosition x="17" y="1"/>
+								</connectionPointOut>
+								<expression>CSEF1_LR_Value</expression>
+							</inVariable>
+							<inVariable localId="22" width="12" height="2">
+								<position x="21" y="12"/>
+								<connectionPointOut>
+									<relPosition x="12" y="1"/>
+								</connectionPointOut>
+								<expression>UDINT#63</expression>
+							</inVariable>
+							<inVariable localId="23" width="12" height="2">
+								<position x="21" y="8"/>
+								<connectionPointOut>
+									<relPosition x="12" y="1"/>
+								</connectionPointOut>
+								<expression>USINT#63</expression>
+							</inVariable>
+							<inVariable localId="24" width="23" height="2">
+								<position x="10" y="16"/>
+								<connectionPointOut>
+									<relPosition x="23" y="1"/>
+								</connectionPointOut>
+								<expression>LSR_ObjConnectionPoint</expression>
+							</inVariable>
+							<block width="37" height="16" typeName="SetpointChecker" instanceName="SetpointChecker" localId="30">
+								<position x="35" y="25"/>
+								<inputVariables>
+									<variable formalParameter="rNewSetPointValue" dataType="REAL" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="4"/>
+											<connection refLocalId="32"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="rSetpointValue" dataType="REAL" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="8"/>
+											<connection refLocalId="21"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="rMaxSetpointValue" dataType="REAL" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="12"/>
+											<connection refLocalId="20"/>
+										</connectionPointIn>
+									</variable>
+								</inputVariables>
+								<inOutVariables/>
+								<outputVariables>
+									<variable formalParameter="xNegativeConfirmation" dataType="BOOL" invertable="true" hideable="true">
+										<connectionPointOut>
+											<relPosition x="39" y="4"/>
+										</connectionPointOut>
+									</variable>
+								</outputVariables>
+							</block>
+							<outVariable localId="31" width="18" height="2">
+								<position x="80" y="8"/>
+								<connectionPointIn>
+									<relPosition x="0" y="1"/>
+									<connection refLocalId="38" formalParameter="rValue">
+										<position x="80" y="9" pathnode="false"/>
+										<position x="65" y="9" pathnode="false"/>
+									</connection>
+								</connectionPointIn>
+								<expression>rNewSetpointValue</expression>
+							</outVariable>
+							<inVariable localId="32" width="18" height="2">
+								<position x="15" y="28"/>
+								<connectionPointOut>
+									<relPosition x="18" y="1"/>
+								</connectionPointOut>
+								<expression>rNewSetpointValue</expression>
+							</inVariable>
+							<block width="28" height="16" typeName="GetSetpointValue" instanceName="GetSetpointValue" localId="38">
+								<position x="35" y="5"/>
+								<inputVariables>
+									<variable formalParameter="usiObjectType" dataType="USINT" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="4"/>
+											<connection refLocalId="23"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="udiAddress" dataType="UDINT" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="8"/>
+											<connection refLocalId="22"/>
+										</connectionPointIn>
+									</variable>
+									<variable formalParameter="LSR_ObjConnectionPoint" dataType="ReSy10x_SR_ObjectConnectPoint" hideable="true">
+										<connectionPointIn>
+											<relPosition x="-2" y="12"/>
+											<connection refLocalId="24"/>
+										</connectionPointIn>
+									</variable>
+								</inputVariables>
+								<inOutVariables/>
+								<outputVariables>
+									<variable formalParameter="rValue" dataType="REAL" hideable="true">
+										<connectionPointOut>
+											<relPosition x="30" y="4"/>
+										</connectionPointOut>
+									</variable>
+								</outputVariables>
+							</block>
+							<outVariable localId="40" width="59" height="2">
+								<position x="74" y="28"/>
+								<connectionPointIn>
+									<relPosition x="0" y="1"/>
+									<connection refLocalId="30" formalParameter="xNegativeConfirmation"/>
+								</connectionPointIn>
+								<expression>CSEF1_LSR_ParameterState.SR_Support.SR_SendData.B_Control.X2</expression>
+							</outVariable>
 						</worksheet>
 					</FBD>
 				</body>

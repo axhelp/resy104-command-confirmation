@@ -9,3 +9,5 @@
 <ADD>@POUS.ReadyToExecuteCommand.XML</ADD>
 <REMOVE>@POUS.BufferCheck.XML</REMOVE>
 <REMOVE>@POUS.ReadyToExecuteCommand.XML</REMOVE>
+<ADD>@POUS.SetpointChecker.XML</ADD>
+<ADD>@POUS.GetSetpointValue.XML</ADD>
